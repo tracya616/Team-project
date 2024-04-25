@@ -55,13 +55,3 @@ print("Spearman rank correlation coefficient between ERA and PPF:", spearman_era
 print("Spearman rank correlation coefficient between R and BPF:", spearman_r_bpf)
 print("Spearman rank correlation coefficient between R and PPF:", spearman_r_ppf)
 
-
-
-
-# Filter data for relevant columns
-filtered_data = teams_data[['W', 'L', 'Ghome']]
-
-# Calculate Pearson correlation coefficient between Wins (W) and Home games (Ghome)
-pearson_correlation = filtered_data['W'].corr(filtered_data['Ghome'])
-
-print("Pearson correlation coefficient between Wins and Home games:", pearson_correlation)
