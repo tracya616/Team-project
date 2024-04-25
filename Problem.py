@@ -17,8 +17,7 @@ parks_df = pd.read_csv(parks_file)
 pitching_df = pd.read_csv(pitching_file)
 
 # Define the range of years (2000 to present)
-start_year = 2000
-end_year = pd.Timestamp.now().year
+start_year = 2000end_year = pd.Timestamp.now().year
 
 # Filter data for the specified years
 teams_df_filtered = teams_df[(teams_df['yearID'] >= start_year) & (teams_df['yearID'] <= end_year)]

@@ -6,11 +6,10 @@ teams_data = pd.read_csv(file_path)
 
 # Specified parks
 specified_parks = [
-    'American Family Field', 'Wrigley Field', 'Citizens Bank Park', 
-    'Fenway Park', 'Nationals Park', 'Oracle Park', 'Coors Field', 
-    'Kauffman Stadium', 'Chase Field', 'Minute Maid Park'
+    'Miller Park', 'Wrigley Field', 'Citizens Bank Park', 
+    'Fenway Park', 'Nationals Park', 'AT&T Park', 'Coors Field', 
+    'Kauffman Stadium', 'Chase Field', 'Minute Maid Park', 'Oracle Park'
 ]
-
 # Filter data for specified parks
 filtered_data = teams_data[teams_data['park'].isin(specified_parks)]
 
