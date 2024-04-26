@@ -28,11 +28,15 @@ def park_regression(park_name):
     # Calculate Mean Squared Error
     mse = mean_squared_error(y, y_pred)
     
+    # Calculate R^2
+    r_squared = model.score(X, y)
+    
     # Display results
     print("Park:", park_name)
     print("Coefficients:", model.coef_)
     print("Intercept:", model.intercept_)
     print("Mean Squared Error:", mse)
+    print("R^2:", r_squared)
     print()
 
 # Perform regression analysis for each park

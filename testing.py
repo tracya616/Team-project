@@ -25,11 +25,15 @@ def team_regression(team_id):
     coef_ppf = model.coef_[1]
     intercept = model.intercept_
     
+    # Calculate R^2
+    r_squared = model.score(X, y)
+    
     # Display results
     print(f"Team: {team_id}")
     print(f"Coefficient for BPF: {coef_bpf:.2f}")
     print(f"Coefficient for PPF: {coef_ppf:.2f}")
     print(f"Intercept: {intercept:.2f}")
+    print(f"R^2: {r_squared:.2f}")
     print()
 
 # Perform regression analysis for each team
