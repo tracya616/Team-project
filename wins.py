@@ -1,5 +1,4 @@
 import pandas as pd
-import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
@@ -31,16 +30,13 @@ def team_regression(team_id):
     # Calculate R^2
     r_squared = model.score(X, y)
     
-    # Plotting
-    plt.figure(figsize=(8, 6))
-    plt.scatter(y, y_pred, color='blue')
-    plt.plot([min(y), max(y)], [min(y), max(y)], color='red', linestyle='--')
-    plt.xlabel('Actual Wins')
-    plt.ylabel('Predicted Wins')
-    plt.title(f'Team {team_id} Regression Fit\nR^2: {r_squared:.2f}, MSE: {mse:.2f}')
-    plt.grid(True)
-    plt.tight_layout()
-    plt.show()
+    # Print regression statistics
+    print(f"Team {team_id} Regression Statistics:")
+    print(f"R^2: {r_squared:.2f}")
+    print(f"Mean Squared Error: {mse:.2f}")
+    print("Coefficients:", [round(coef, 2) for coef in model.coef_])
+    print("Intercept:", round(model.intercept_, 2))
+    print("")
 
 # Perform regression analysis for each team
 for team_id in team_ids:
