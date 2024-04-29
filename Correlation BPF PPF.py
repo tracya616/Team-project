@@ -35,6 +35,7 @@ def park_regression(park_name):
     # Define predictors (X) and target (y)
     X = park_df[['BPF', 'PPF']]  # Ballpark factors
     y = park_df['W']  # Wins
+
     
     # Initialize and fit the linear regression model
     model = LinearRegression()
